@@ -1,4 +1,4 @@
-# Buck Converter
+﻿# Buck Converter
 
 Schematic for a 12 V to 5 V, 1 A step-down converter built around the LM2596T-ADJ, designed and simulated in LTspice, drawn in Fusion Electronics, and planned for a perfboard build.
 
@@ -10,6 +10,7 @@ Schematic for a 12 V to 5 V, 1 A step-down converter built around the LM2596T-AD
 | schematics/buck-converter.png | Same schematic as an image |
 | schematics/buck-converter.sch | EAGLE-format schematic exported from Fusion |
 | BOM.md | Parts list with values and footprints |
+| RESEARCH.md | Design and build write-up: theory, part selection, divider math, problems and fixes, results |
 
 ## How it works
 
@@ -21,4 +22,6 @@ Built on perfboard and tested: 4.98 V with no load, 4.97 V at full load (5 ohm, 
 
 ## Status
 
-Schematic complete, ERC clean, and matches the built board. The inductor and C_OUT footprints are placeholders to check against the real parts.
+Perfboard version: built, tested, and working (4.98 V no load, 4.97 V at 1 A). Schematic is complete, ERC clean, and matches the built board.
+
+PCB version: **in progress**. The next step is generating the board from the Fusion schematic and laying out the switching loop. The inductor and C_OUT footprints are placeholders to check against the real parts before ordering.
