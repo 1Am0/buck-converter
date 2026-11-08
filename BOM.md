@@ -10,12 +10,15 @@
 | C_IN | 470 uF, 25 V or more | Radial electrolytic | CAPPRD500W60D1000H1250 |
 | C_OUT | 220 uF, 10 V or more | Radial electrolytic | CAPPRD500W50D500H1100 (check can size) |
 | C_BYP | 100 nF | Ceramic, through-hole | CERAMIC-2.54MM |
-| R1 | 1 kohm | 1/4 W axial | 0207/10 |
-| R2 | 3 kohm | 1/4 W axial | 0207/10 |
-| R3 | 68 ohm | 1/4 W axial | 0207/10 |
+| R1 | 1 kohm | 1/4 W axial, 1% | 0207/10 |
+| R2 | 2.2 kohm | 1/4 W axial, 1% | 0207/10 |
+| R3 | 680 ohm | 1/4 W axial, 1% | 0207/10 |
+| R4 | 220 ohm | 1/4 W axial, 1% | 0207/10 |
 | J_IN | TB007-508-02BE | 2-pin 5.08 mm terminal | CUI_TB007-508-02BE |
 | J_OUT | TB007-508-02BE | 2-pin 5.08 mm terminal | CUI_TB007-508-02BE |
 
-Off board: 12 V 2 A wall adapter, inline 2 A fuse, 5 ohm 25 W load resistor.
+Off board: 12 V 2 A wall adapter, inline 2 A fuse, 5 ohm 25 W load resistor, TO-220 heatsink for U1.
 
-Output voltage: Vout = 1.23 V x (1 + (R2 + R3) / R1) = 1.23 x (1 + 3068 / 1000) = 5.00 V.
+Output voltage: Vout = 1.23 V x (1 + (R2 + R3 + R4) / R1) = 1.23 x (1 + 3100 / 1000) = 5.04 V predicted.
+
+Measured on the built board: 4.98 V with no load, 4.97 V with the 5 ohm load, 1.23 V at the FB pin.
